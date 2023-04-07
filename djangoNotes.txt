@@ -1,0 +1,30 @@
+To start new django project in current directory
+`django-admin startproject <project name> .`
+    When running this code, 2 things will show up in navigation;
+        A folder with the project name and a file called `manage.py`
+            everything inside the folder is realted to the configuration of the project
+            In this project, we will be using `urls.py` and `settings.py`
+
+To run the new project we use the command
+`python3 manage.py runserver`
+# Warning in red would show up, that is expected
+
+To start a new app, use the following command
+`django-admin startapp home`
+This will created a new folder with the app dependencies
+
+To run the new app we need to add to our INSTALLED_APPS variable inside the project settigns file
+In our case it's called, decisions.settigns
+
+TO add the first function in the app, we script our function in the app's view.py
+
+To make templates for the app, we make a new folder inseide the app directory, we call it "Templates"
+We also make another folder inside "templates" with the app's name 
+
+This uses DTL (Django template language) to handle the render freamwork of html
+
+
+ Modularisation:
+ To make the apps inside the porject modular, we create urls.py inside each app with similar entities to the one in the porjects orginal "urls.py"
+ In the orginal urls.py we import the "include" function beside the path function form django.urls
+ 
